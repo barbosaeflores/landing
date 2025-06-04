@@ -36,27 +36,40 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero {
-  background-color: #f6ebe1;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
 .hero.hero-img {
-  background-image: url("hero.jpg");
+  position: relative;
+  background-image: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: white;
 }
 
-.hero h1 {
+.hero.hero-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-text h1 {
   font-size: 2rem;
-  color: #fff;
+  color: white;
 }
 
-.hero p {
+.hero-text p {
   margin: 1rem 0;
-  color: #fff;
+  color: #eaeaea;
 }
 
 .hero .btn {
