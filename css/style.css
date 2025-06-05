@@ -90,17 +90,6 @@ nav a:hover {
   gap: 1.5rem;
 }
 
-  /* MOBILE */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  header .logo {
-    height: 50px; /* ou 40px, se quiser menor ainda */
-  }
-}
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -118,6 +107,19 @@ nav a:hover {
     display: flex;
   }
 }
+
+
+  /* MOBILE */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  header .logo {
+    height: 50px; /* ou 40px, se quiser menor ainda */
+  }
+}
+
 
 .hero {
   display: flex;
