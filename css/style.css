@@ -313,7 +313,7 @@ footer {
   .menu-icon {
     display: block;
     align-self: center;
-    transform: translateY(-8px); /* Sobe o ícone */
+    transform: translateY(-12px); /* Sobe o ícone */
     margin-right: 0;        /* Afasta da borda direita */
     width: 30px;
     height: 22px;
