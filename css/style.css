@@ -94,7 +94,7 @@ nav a:hover {
   display: block;
   height: 3px;
   background-color: #5e3c1e;
-  margin: 6px 0;
+  margin: 5px 0;
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -313,8 +313,8 @@ footer {
   .menu-icon {
     display: block;
     align-self: center;
-    transform: translateY(-8px); /* Sobe o ícone */
-    margin-right: 2rem;        /* Afasta da borda direita */
+    transform: translateY(-10px); /* Sobe o ícone */
+    margin-right: 4rem;        /* Afasta da borda direita */
     width: 30px;
     height: 22px;
     cursor: pointer;
