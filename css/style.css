@@ -343,11 +343,11 @@ footer {
   }
 
   header .logo {
-    height: 50px;
+    height: 45px;
   }
 
   .container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .hero-text h1 {
