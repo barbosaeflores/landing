@@ -88,8 +88,6 @@ nav a:hover {
   height: 22px;
   position: relative;
   z-index: 1000;
-  margin-top: 8px;  /* ou ajuste fino */
-  margin-right: 0;
 }
 
 .menu-icon span {
@@ -314,7 +312,16 @@ footer {
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
+    align-self: center;
+    transform: translateY(-4px); /* Sobe o ícone */
+    margin-right: 0.5rem;        /* Afasta da borda direita */
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
   }
+
 
   .nav-links {
     max-height: 0;
