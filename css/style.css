@@ -34,7 +34,6 @@ header {
 
 header .logo {
   height: 90px;
-  max-height: 60px;
   width: auto;
 }
 
@@ -84,28 +83,9 @@ nav a:hover {
   color: #5e3c1e;
 }
 
-/* Estilo padrão do menu */
 .nav-links {
   display: flex;
   gap: 1.5rem;
-}
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #e4c9af;
-    padding: 1rem;
-    position: absolute;
-    top: 120px;
-    right: 0;
-    width: 100%;
-    text-align: right;
-  }
-
-  /* Quando checkbox ativado, mostra o menu */
-  #menu-toggle:checked + .menu-icon + .nav-links {
-    display: flex;
-  }
 }
 
 .hero {
@@ -146,9 +126,9 @@ nav a:hover {
 .hero-text h1 {
   font-size: 2rem;
   color: white;
-  white-space: nowrap;        /* impede quebra de linha */
-  overflow: hidden;           /* evita estouro de layout */
-  text-overflow: ellipsis;    /* adiciona "..." se necessário */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hero-text p {
@@ -252,10 +232,7 @@ footer {
   margin-top: 2rem;
 }
 
-
-
-  /* MOBILE */
-
+/* Responsivo */
 @media (max-width: 480px) {
   .hero-text h1 {
     font-size: 1.5rem;
@@ -267,7 +244,23 @@ footer {
     display: block;
   }
 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #e4c9af;
+    padding: 1rem;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
   header .logo {
-    height: 50px; /* ou 40px, se quiser menor ainda */
+    height: 50px;
   }
 }
