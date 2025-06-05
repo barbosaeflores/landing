@@ -50,15 +50,12 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero {
+.hero.hero-img {
   display: flex;
   align-items: center;       /* Alinha verticalmente */
   justify-content: center;   /* Centraliza horizontalmente (opcional) */
   min-height: 600px;         /* ou 100vh, se quiser ocupar toda a tela */
   position: relative;
-}
-
-.hero.hero-img {
   position: relative;
   background-image: url("../images/hero.jpg");
   background-size: cover;
