@@ -71,6 +71,49 @@ nav a:hover {
   text-decoration: none;
 }
 
+/* Esconde o checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Estilo do ícone de menu */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #5e3c1e;
+}
+
+/* Estilo padrão do menu */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #e4c9af;
+    padding: 1rem;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  /* Quando checkbox ativado, mostra o menu */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+}
+
 .hero {
   display: flex;
   align-items: center;
