@@ -245,7 +245,6 @@ footer {
   }
 
   .nav-links {
-    display: none;
     flex-direction: column;
     background: #e4c9af;
     padding: 1rem;
