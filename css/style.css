@@ -1,8 +1,12 @@
-
+/* RESET E BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,12 +16,14 @@ body {
   background-color: #fffaf5;
 }
 
+/* CONTAINER PADRÃO */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 1rem;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -32,25 +38,22 @@ header {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-header .logo {
-  height: 90px;
-  width: auto;
-}
-
 .logo-link {
   display: inline-block;
 }
 
+header .logo {
+  height: 60px;
+  width: auto;
+}
+
 header .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
 }
 
+/* NAVEGAÇÃO */
 nav {
   display: flex;
   gap: 1.5rem;
@@ -71,15 +74,13 @@ nav a {
 nav a:hover {
   background-color: #5e3c1e;
   color: #e4c9af;
-  text-decoration: none;
 }
 
-/* Esconde o checkbox */
+/* MENU HAMBÚRGUER */
 #menu-toggle {
   display: none;
 }
 
-/* Estilo do ícone de menu */
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -98,7 +99,6 @@ nav a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-/* ANIMAÇÃO para transformar em X */
 #menu-toggle:checked + .menu-icon span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -114,21 +114,23 @@ nav a:hover {
   gap: 1.5rem;
 }
 
+/* HERO */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 600px;
-  background-position: center center;
   position: relative;
+  background-position: center center;
 }
 
 .hero.hero-img {
   background-image: url("../images/hero.jpg");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   color: white;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 .hero.hero-img::before {
@@ -170,15 +172,24 @@ nav a:hover {
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .hero .btn:hover {
   background-color: #a06b42;
+  transform: scale(1.05);
 }
 
+/* SEÇÕES */
+section {
+  scroll-margin-top: 120px;
+}
+
+/* ÁREAS DE ATUAÇÃO */
 .areas {
   background: #fff;
   padding: 2rem 1rem;
+  border-top: 2px solid #e4c9af;
 }
 
 .area-grid {
@@ -194,7 +205,12 @@ nav a:hover {
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .area-card img {
@@ -210,7 +226,6 @@ nav a:hover {
 
 .area-card ul {
   list-style: none;
-  padding-left: 0;
 }
 
 .area-card li {
@@ -222,9 +237,11 @@ nav a:hover {
   margin-right: 0.5rem;
 }
 
+/* CONTATO */
 .contato {
   background-color: #f1ede7;
   padding: 2rem 1rem;
+  border-top: 2px solid #e4c9af;
 }
 
 .contato h2 {
@@ -249,6 +266,7 @@ nav a:hover {
   margin-right: 0.5rem;
 }
 
+/* RODAPÉ */
 footer {
   background-color: #8b5e3c;
   color: white;
@@ -258,14 +276,11 @@ footer {
   margin-top: 2rem;
 }
 
-section {
-  scroll-margin-top: 120px; /* ou altura exata do header */
-}
-
+/* FLOAT WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* corrigido para canto inferior direito */
+  right: 20px;
   background-color: #25D366;
   color: white;
   border-radius: 50%;
@@ -286,115 +301,19 @@ section {
   background-color: #1ebe5d;
 }
 
-/* Responsivo */
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    background: #e4c9af;
-    padding: 1rem;
-    position: absolute;
-    top: 120px;
-    right: 0;
-    width: 100%;
-    text-align: right;
-  }
-
-  #menu-toggle:checked + .menu-icon + .nav-links {
-    display: flex;
-  }
-
-  header .logo {
-    height: 50px;
-  }
-}
-
-
-/* === Melhorias visuais aplicadas === */
-
-/* 1. Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-
-/* 2. Transições suaves */
-button, a.btn, nav a {
-  transition: all 0.3s ease;
-}
-
-/* 3. Hover com leve aumento */
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* 4. Sombras sutis nas áreas */
-.area-card {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s ease;
-}
-.area-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-/* 5. Fade-in suave no hero */
-.hero.hero-img {
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
-}
+/* ANIMAÇÕES */
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
 
-/* 6. Separadores decorativos entre seções */
-.areas, .contato {
-  border-top: 2px solid #e4c9af;
-}
-
-/* 7. Ajustes responsivos adicionais */
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
-
-  .area-card {
-    padding: 0.5rem;
-  }
-}
-
-/* 8. Estilo visual para seção ativa com :target (simples simulação) */
-section:target {
-  outline: 2px solid #8b5e3c;
-}
-
-
-/* === Animação suave no menu hamburguer === */
-
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
   }
 
-  header .logo {
-    height: 50px;
-  }
-.menu-icon {
-  display: block;
-}
   .nav-links {
     max-height: 0;
     overflow: hidden;
@@ -412,5 +331,21 @@ section:target {
   #menu-toggle:checked + .menu-icon + .nav-links {
     max-height: 300px;
     padding: 1rem;
+  }
+
+  header .logo {
+    height: 50px;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .area-card {
+    padding: 0.5rem;
   }
 }
