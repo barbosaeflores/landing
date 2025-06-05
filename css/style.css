@@ -88,6 +88,8 @@ nav a:hover {
   height: 22px;
   position: relative;
   z-index: 1000;
+  margin-botton: 8px;  /* ou ajuste fino */
+  margin-left: auto;
 }
 
 .menu-icon span {
