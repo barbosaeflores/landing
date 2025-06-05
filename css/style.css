@@ -108,19 +108,6 @@ nav a:hover {
   }
 }
 
-
-  /* MOBILE */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  header .logo {
-    height: 50px; /* ou 40px, se quiser menor ainda */
-  }
-}
-
-
 .hero {
   display: flex;
   align-items: center;
@@ -162,12 +149,6 @@ nav a:hover {
   white-space: nowrap;        /* impede quebra de linha */
   overflow: hidden;           /* evita estouro de layout */
   text-overflow: ellipsis;    /* adiciona "..." se necessário */
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
 }
 
 .hero-text p {
@@ -269,4 +250,24 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
+}
+
+
+
+  /* MOBILE */
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  header .logo {
+    height: 50px; /* ou 40px, se quiser menor ainda */
+  }
 }
