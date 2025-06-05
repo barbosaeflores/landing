@@ -12,51 +12,74 @@ body {
   background-color: #fffaf5;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+}
+
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(228, 201, 175, 0.85);
+  height: 120px;
+  background-color: rgba(228, 201, 175, 0.9);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
-  z-index: 10;
-}
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-}
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
+  padding: 0 2rem;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 header .logo {
-  max-width: 120px;
-  margin: 0 auto 1rem;
-  display: block;
+  height: 90px;
+  width: auto;
+}
+
+header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 nav a {
-  color: white;
-  margin: 0 1rem;
+  color: #5e3c1e;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #5e3c1e;
+  color: #e4c9af;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  background-position: center center;
+  position: relative;
 }
 
 .hero.hero-img {
-  display: flex;
-  align-items: center;       /* Alinha verticalmente */
-  justify-content: center;   /* Centraliza horizontalmente (opcional) */
-  min-height: 600px;         /* ou 100vh, se quiser ocupar toda a tela */
-  position: relative;
-  position: relative;
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -104,12 +127,6 @@ nav a:hover {
 
 .hero .btn:hover {
   background-color: #a06b42;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem;
 }
 
 .areas {
@@ -192,123 +209,4 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
-}
-
-header .logo {
-  height: 90px;
-  max-height: 60px;
-  width: auto;
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: #5e3c1e;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-nav a {
-  position: relative;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #5e3c1e;
-  color: #e4c9af;
-  text-decoration: none;
-}
-
-.hero {
-  
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  background-position: center center;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 120px;
-  background-color: rgba(228, 201, 175, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-  top: 0;
-  width: 100%;
-  height: 120px;
-  background-color: rgba(228, 201, 175, 0.9);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-  top: 0;
-  width: 100%;
-  background-color: rgba(228, 201, 175, 0.85);
-  z-index: 999;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
-}
-
-.hero-text {
-  
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-nav a {
-  color: #5e3c1e;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
-
-nav a:hover {
-  background-color: #5e3c1e;
-  color: #e4c9af;
-  text-decoration: none;
-}
-
-header .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
 }
