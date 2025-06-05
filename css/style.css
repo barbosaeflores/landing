@@ -70,7 +70,7 @@ nav a:hover {
 .hero-text {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
