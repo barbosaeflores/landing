@@ -392,7 +392,9 @@ section:target {
   header .logo {
     height: 50px;
   }
-
+.menu-icon {
+  display: block;
+}
   .nav-links {
     max-height: 0;
     overflow: hidden;
