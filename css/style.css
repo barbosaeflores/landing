@@ -90,11 +90,16 @@ nav a:hover {
   gap: 1.5rem;
 }
 
-/* MOBILE */
+  /* MOBILE */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
   }
+
+  header .logo {
+    height: 50px; /* ou 40px, se quiser menor ainda */
+  }
+}
 
   .nav-links {
     display: none;
