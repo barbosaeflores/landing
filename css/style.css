@@ -109,6 +109,15 @@ nav a:hover {
 .hero-text h1 {
   font-size: 2rem;
   color: white;
+  white-space: nowrap;        /* impede quebra de linha */
+  overflow: hidden;           /* evita estouro de layout */
+  text-overflow: ellipsis;    /* adiciona "..." se necessário */
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
 }
 
 .hero-text p {
