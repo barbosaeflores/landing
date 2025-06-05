@@ -82,9 +82,31 @@ nav a:hover {
 /* Estilo do ícone de menu */
 .menu-icon {
   display: none;
-  font-size: 2rem;
   cursor: pointer;
-  color: #5e3c1e;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  z-index: 1000;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background-color: #5e3c1e;
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ANIMAÇÃO para transformar em X */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .nav-links {
