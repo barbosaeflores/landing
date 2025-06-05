@@ -184,6 +184,7 @@ nav a:hover {
 
 
 .contato-toggle {
+.contato-toggle {
   text-align: center;
   margin-top: 1.5rem;
   position: relative;
@@ -194,7 +195,7 @@ nav a:hover {
   display: none;
 }
 
-/* Container que vai aparecer com animação */
+/* Links inicialmente ocultos */
 .contato-links {
   max-height: 0;
   opacity: 0;
@@ -206,13 +207,13 @@ nav a:hover {
   transition: all 0.5s ease;
 }
 
-/* Quando clicado, revela os botões */
+/* Quando o checkbox é marcado, revela os links */
 #toggle-contato:checked ~ .contato-links {
   max-height: 200px;
   opacity: 1;
 }
 
-/* Estilo dos botões */
+/* Botões */
 .btn {
   background-color: #8b5e3c;
   color: white;
@@ -229,7 +230,6 @@ nav a:hover {
   background-color: #a06b42;
   transform: scale(1.03);
 }
-
 
 /* SEÇÕES */
 section {
