@@ -182,6 +182,55 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+
+.contato-toggle {
+  text-align: center;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+/* Esconde o checkbox */
+#toggle-contato {
+  display: none;
+}
+
+/* Container que vai aparecer com animação */
+.contato-links {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+/* Quando clicado, revela os botões */
+#toggle-contato:checked ~ .contato-links {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* Estilo dos botões */
+.btn {
+  background-color: #8b5e3c;
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a06b42;
+  transform: scale(1.03);
+}
+
+
 /* SEÇÕES */
 section {
   scroll-margin-top: 120px;
