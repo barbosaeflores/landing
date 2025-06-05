@@ -327,3 +327,35 @@ button, a.btn, nav a {
 section:target {
   outline: 2px solid #8b5e3c;
 }
+
+
+/* === Animação suave no menu hamburguer === */
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  header .logo {
+    height: 50px;
+  }
+
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: #e4c9af;
+    padding: 0 1rem;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    max-height: 300px;
+    padding: 1rem;
+  }
+}
