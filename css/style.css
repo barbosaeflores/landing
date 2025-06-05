@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -267,4 +263,67 @@ footer {
   header .logo {
     height: 50px;
   }
+}
+
+
+/* === Melhorias visuais aplicadas === */
+
+/* 1. Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Transições suaves */
+button, a.btn, nav a {
+  transition: all 0.3s ease;
+}
+
+/* 3. Hover com leve aumento */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* 4. Sombras sutis nas áreas */
+.area-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+.area-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* 5. Fade-in suave no hero */
+.hero.hero-img {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* 6. Separadores decorativos entre seções */
+.areas, .contato {
+  border-top: 2px solid #e4c9af;
+}
+
+/* 7. Ajustes responsivos adicionais */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .area-card {
+    padding: 0.5rem;
+  }
+}
+
+/* 8. Estilo visual para seção ativa com :target (simples simulação) */
+section:target {
+  outline: 2px solid #8b5e3c;
 }
