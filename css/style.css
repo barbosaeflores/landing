@@ -395,38 +395,37 @@ footer {
   
 .nav-links {
   max-height: 0;
-  opacity: 0;
   pointer-events: none;
   overflow: hidden;
   flex-direction: column;
-  background-color: rgba(228, 201, 175, 0.9); /* mais leve pro blur funcionar melhor */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px); /* Safari */
+  background-color: rgba(228, 201, 175, 0.9); /* um pouco mais transparente */
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px);
   padding: 0 1rem;
   position: absolute;
   top: 120px;
   right: 0;
   width: 100%;
   text-align: right;
-  z-index: 998;
-  border-top: 1px solid rgba(94, 60, 30, 0.3);
+  z-index: 999;
+  opacity: 0;
   transition:
     max-height 0.4s ease,
-    opacity 0.4s ease,
     padding 0.3s ease,
-    background-color 0.3s ease;
+    opacity 0.4s ease,
+    background-color 0.4s ease;
 }
 
-/* Quando o menu é ativado */
 #menu-toggle:checked + .menu-icon + .nav-links {
   max-height: 300px;
+  padding: 1rem;
   opacity: 1;
   pointer-events: auto;
-  padding: 1rem;
-  background-color: rgba(228, 201, 175, 0.9); /* mesma transparência */
+  background-color: rgba(228, 201, 175, 0.9); /* mesmo valor */
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
   
   header .logo {
     height: 50px;
