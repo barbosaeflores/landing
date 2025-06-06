@@ -395,27 +395,26 @@ footer {
   }
 
   .nav-links {
-    max-height: 0;
-    opacity: 0;
-    pointer-events: none;
-    overflow: hidden;
-    flex-direction: column;
-    background-color: rgba(228, 201, 175, 0);
-    backdrop-filter: blur(6px);
-    padding: 0 1rem;
-    position: absolute;
-    top: 120px;
-    right: 0;
-    width: 100%;
-    text-align: right;
-    border-top: 1px solid rgba(94, 60, 30, 0.3);
-    transition:
-      max-height 0.4s ease,
-      padding 0.3s ease,
-      background-color 0.3s ease,
-      opacity 0.3s ease;
-  }
-
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: rgba(228, 201, 175, 0.9); /* precisa ter alguma opacidade */
+  backdrop-filter: blur(6px);
+  padding: 0 1rem;
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  border-top: 2px solid rgba(94, 60, 30, 0.9);
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease,
+    background-color 0.3s ease,
+    opacity 0.3s ease;
+}
   #menu-toggle:checked + .menu-icon + .nav-links {
     max-height: 300px;
     padding: 1rem;
