@@ -150,13 +150,22 @@
   <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <script>
+<script>
+  // Fecha o menu ao clicar em qualquer link do menu
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById('menu-toggle').checked = false;
     });
   });
-  </script>
+
+  // Fecha o menu ao clicar no logo (link para o topo)
+  const logo = document.querySelector('.logo-link');
+  if (logo) {
+    logo.addEventListener('click', () => {
+      document.getElementById('menu-toggle').checked = false;
+    });
+  }
+</script>
 
   
 </body>
