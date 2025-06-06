@@ -125,7 +125,7 @@ nav a:hover {
   min-height: 600px;
   position: relative;
   background-position: center center;
-  padding-top: 220px; /* Adiciona espaçamento entre topo e conteúdo */
+  padding-top: 240px; /* Adiciona espaçamento entre topo e conteúdo */
 }
 
 .hero.hero-img {
