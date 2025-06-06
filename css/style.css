@@ -422,8 +422,9 @@ footer {
     opacity: 1;
     pointer-events: auto;
     background-color: rgba(228, 201, 175, 0.9);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
-}
   
   header .logo {
     height: 50px;
