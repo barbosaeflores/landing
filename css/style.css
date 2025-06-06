@@ -410,6 +410,8 @@ footer {
   #menu-toggle:checked + .menu-icon + .nav-links {
     max-height: 300px;
     padding: 1rem;
+    background-color: rgba(228, 201, 175, 0.9); /* Bege com transparência */
+    backdrop-filter: blur(4px); /* opcional para dar efeito moderno */
   }
 
   header .logo {
