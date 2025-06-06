@@ -408,11 +408,11 @@ footer {
     width: 100%;
     text-align: right;
     z-index: 9999; /* força sobreposição correta */
-   /* transition:
+    transition:
       max-height 0.4s ease,
       padding 0.3s ease,
       background-color 0.4s ease,
-      opacity 0.3s ease;*/
+      opacity 0.3s ease;
   }
 
   #menu-toggle:checked + .menu-icon + .nav-links {
