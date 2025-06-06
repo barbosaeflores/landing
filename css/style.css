@@ -395,11 +395,10 @@ footer {
 
   .nav-links {
     max-height: 0;
-    opacity: 0;
     pointer-events: none;
     overflow: hidden;
     flex-direction: column;
-    background-color: rgba(228, 201, 175, 0); /* inicia totalmente transparente */
+    background-color: rgba(228, 201, 175, 0.9); /* inicia totalmente transparente */
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     padding: 0 1rem;
@@ -409,11 +408,11 @@ footer {
     width: 100%;
     text-align: right;
     z-index: 9999; /* força sobreposição correta */
-    transition:
+   /* transition:
       max-height 0.4s ease,
       padding 0.3s ease,
       background-color 0.4s ease,
-      opacity 0.3s ease;
+      opacity 0.3s ease;*/
   }
 
   #menu-toggle:checked + .menu-icon + .nav-links {
