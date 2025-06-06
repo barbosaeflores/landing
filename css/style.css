@@ -37,8 +37,8 @@ header {
   width: 100%;
   height: 120px;
   background-color: rgba(228, 201, 175, 0.9); /* bege com transparência */
-  backdrop-filter: blur(6px); /* efeito fosco */
-  -webkit-backdrop-filter: blur(6px); /* suporte para Safari */
+  backdrop-filter: blur(10px); /* efeito fosco */
+  -webkit-backdrop-filter: blur(10px); /* suporte para Safari */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -407,7 +407,7 @@ footer {
   right: 0;
   width: 100%;
   text-align: right;
-  z-index: 999;
+  z-index: 998;
   opacity: 0;
   transition:
     max-height 0.4s ease,
