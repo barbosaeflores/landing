@@ -279,6 +279,11 @@ section {
   margin-bottom: 1rem;
 }
 
+.area h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #4d3223;
+  margin-bottom: 1rem;
+}
 .area-card h3 {
   font-family: 'Poppins', sans-serif;
   color: #8b5e3c;
@@ -318,6 +323,7 @@ section {
 }
 
 .contato-grid a {
+  font-family: 'Rubik', sans-serif;
   text-decoration: none;
   color: #333;
   font-size: 1rem;
