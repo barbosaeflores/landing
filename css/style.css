@@ -401,7 +401,6 @@ footer {
   overflow: hidden;
   flex-direction: column;
   background-color: rgba(228, 201, 175, 0.9); /* precisa ter alguma opacidade */
-  backdrop-filter: blur(6px);
   padding: 0 1rem;
   position: absolute;
   top: 120px;
@@ -414,6 +413,7 @@ footer {
     padding 0.3s ease,
     background-color 0.3s ease,
     opacity 0.3s ease;
+  backdrop-filter: blur(6px);
 }
   #menu-toggle:checked + .menu-icon + .nav-links {
     max-height: 300px;
