@@ -119,11 +119,12 @@ nav a:hover {
 /* HERO */
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Agora alinha no topo */
   justify-content: center;
   min-height: 600px;
   position: relative;
   background-position: center center;
+  padding-top: 160px; /* Adiciona espaçamento entre topo e conteúdo */
 }
 
 .hero.hero-img {
@@ -149,7 +150,6 @@ nav a:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  margin-top: 160px;
   text-align: center;
 }
 
