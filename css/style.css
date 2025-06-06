@@ -394,36 +394,37 @@ footer {
   }
 
   .nav-links {
-    max-height: 0;
-    pointer-events: none;
-    overflow: hidden;
-    flex-direction: column;
-    background-color: rgba(228, 201, 175, 0.9); /* bege com transparência */
-    backdrop-filter: blur(6px); /* efeito fosco */
-    -webkit-backdrop-filter: blur(6px); /* suporte para Safari */
-    padding: 0 1rem;
-    position: absolute;
-    top: 120px;
-    right: 0;
-    width: 100%;
-    text-align: right;
-    z-index: 9999; /* força sobreposição correta */
-    transition:
-      max-height 0.4s ease,
-      padding 0.3s ease,
-      background-color 0.4s ease,
-      opacity 0.3s ease;
-  }
+  max-height: 0;
+  pointer-events: none;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: rgba(228, 201, 175, 0.6); /* um pouco mais transparente */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0 1rem;
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  z-index: 999;
+  opacity: 0;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease,
+    opacity 0.4s ease,
+    background-color 0.4s ease;
+}
 
-  #menu-toggle:checked + .menu-icon + .nav-links {
-    max-height: 300px;
-    padding: 1rem;
-    pointer-events: auto;
-    background-color: rgba(228, 201, 175, 0.9); /* bege com transparência */
-    backdrop-filter: blur(6px); /* efeito fosco */
-    -webkit-backdrop-filter: blur(6px); /* suporte para Safari */
-    z-index: 9999;
-  }
+#menu-toggle:checked + .menu-icon + .nav-links {
+  max-height: 300px;
+  padding: 1rem;
+  opacity: 1;
+  pointer-events: auto;
+  background-color: rgba(228, 201, 175, 0.6); /* mesmo valor */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
   
   header .logo {
     height: 50px;
