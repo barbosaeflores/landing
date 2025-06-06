@@ -393,19 +393,21 @@ footer {
   }
 
 
-  .nav-links {
-    max-height: 0;
-    overflow: hidden;
-    flex-direction: column;
-    background: #e4c9af;
-    padding: 0 1rem;
-    position: absolute;
-    top: 120px;
-    right: 0;
-    width: 100%;
-    text-align: right;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-  }
+.nav-links {
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: rgba(228, 201, 175, 0); /* Transparente inicialmente */
+  padding: 0 1rem;
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 100%;
+  text-align: right;
+
+  /* Aqui está o segredo */
+  transition: max-height 0.4s ease, padding 0.3s ease, background-color 0.3s ease;
+}
 
   #menu-toggle:checked + .menu-icon + .nav-links {
     max-height: 300px;
