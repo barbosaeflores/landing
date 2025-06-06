@@ -23,13 +23,6 @@ body {
   background-color: #fffaf5;
 }
 
-h1, h2, h3,
-.hero-text h1,
-.hero-text p,
-.area-card h3 {
-  font-family: 'Poppins', sans-serif;
-}
-
 /* CONTAINER PADRÃO */
 .container {
   max-width: 1100px;
