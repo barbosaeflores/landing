@@ -36,6 +36,50 @@
 </head>
 <body>
 
+
+  <!-- Modal de alerta contra golpes -->
+  <div class="fraud-modal" id="fraud-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="fraud-modal-title">
+    <div class="fraud-modal__backdrop" data-fraud-close></div>
+    <div class="fraud-modal__card" role="document">
+      <button class="fraud-modal__close" type="button" aria-label="Fechar alerta" data-fraud-close>&times;</button>
+
+      <div class="fraud-modal__icon" aria-hidden="true">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+
+      <p class="fraud-modal__eyebrow">Comunicado importante</p>
+      <h2 id="fraud-modal-title">Alerta de golpe</h2>
+
+      <p class="fraud-modal__lead">
+        Golpistas estão entrando em contato com clientes se passando por integrantes do Barbosa &amp; Flores Advogados Associados.
+      </p>
+
+      <div class="fraud-modal__warning">
+        <strong>Não efetue depósitos, transferências ou pagamentos</strong>
+        sem antes confirmar diretamente com o escritório.
+      </div>
+
+      <div class="fraud-modal__checks">
+        <p>Desconfie de mensagens urgentes, números desconhecidos, chamadas de vídeo suspeitas e contas em nome de terceiros.</p>
+      </div>
+
+      <div class="fraud-modal__contacts" aria-label="Canais oficiais do escritório">
+        <h3>Canais oficiais</h3>
+        <a href="tel:+551143351370"><i class="fa-solid fa-phone"></i> (11) 4335-1370</a>
+        <a href="tel:+551143391637"><i class="fa-solid fa-phone"></i> (11) 4339-1637</a>
+        <a href="https://wa.me/5511996136198" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Marcelo Flores</a>
+        <a href="https://wa.me/5511971806372" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Gracy F. Barbosa</a>
+        <a href="mailto:contato@barbosaefloresadvogados.com.br"><i class="fa-solid fa-envelope"></i> contato@barbosaefloresadvogados.com.br</a>
+      </div>
+
+      <div class="fraud-modal__actions">
+        <button class="btn fraud-modal__primary" type="button" data-fraud-close>Entendi</button>
+        <a class="btn fraud-modal__secondary" href="#contato" data-fraud-contact>Ver canais oficiais</a>
+      </div>
+    </div>
+  </div>
+
+
   
 <header>
   <div class="container">
@@ -126,6 +170,9 @@
       <a href="tel:+551143351370">
         <i class="fa-solid fa-phone"></i> (11) 4335-1370
       </a>
+      <a href="tel:+551143391637">
+        <i class="fa-solid fa-phone"></i> (11) 4339-1637
+      </a>
       <a href="https://wa.me/5511971806372" target="_blank">
         <i class="fa-brands fa-whatsapp"></i> Gracy F. Barbosa
       </a>
@@ -146,6 +193,9 @@
   <footer>
     <div class="container">
       <p><i class="fa-solid fa-scale-balanced"></i> &copy; 2025 Barbosa & Flores Advogados Associados. Todos os direitos reservados.</p>
+      <button class="footer-alert-link" type="button" data-fraud-open>
+        <i class="fa-solid fa-shield-halved"></i> Alerta de golpe: veja antes de fazer qualquer pagamento
+      </button>
     </div>
   </footer>
 
@@ -168,6 +218,52 @@
       document.getElementById('menu-toggle').checked = false;
     });
   }
+
+  // Modal de alerta contra golpes
+  const fraudModal = document.getElementById('fraud-modal');
+  const fraudOpenButtons = document.querySelectorAll('[data-fraud-open]');
+  const fraudCloseButtons = document.querySelectorAll('[data-fraud-close]');
+  const fraudContactLink = document.querySelector('[data-fraud-contact]');
+  const fraudSessionKey = 'barbosaFloresFraudAlertViewed';
+
+  function openFraudModal() {
+    if (!fraudModal) return;
+    fraudModal.classList.add('is-visible');
+    fraudModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeFraudModal() {
+    if (!fraudModal) return;
+    fraudModal.classList.remove('is-visible');
+    fraudModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    sessionStorage.setItem(fraudSessionKey, 'true');
+  }
+
+  fraudOpenButtons.forEach(button => {
+    button.addEventListener('click', openFraudModal);
+  });
+
+  fraudCloseButtons.forEach(button => {
+    button.addEventListener('click', closeFraudModal);
+  });
+
+  if (fraudContactLink) {
+    fraudContactLink.addEventListener('click', closeFraudModal);
+  }
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && fraudModal && fraudModal.classList.contains('is-visible')) {
+      closeFraudModal();
+    }
+  });
+
+  window.addEventListener('load', () => {
+    if (!sessionStorage.getItem(fraudSessionKey)) {
+      setTimeout(openFraudModal, 350);
+    }
+  });
 </script>
 
   
